@@ -1,0 +1,20 @@
+## Receive options.
+set imap_user=doug@dougscarborough.com
+set imap_pass=*********
+set folder = imaps://doug@dougscarborough.com@imap.gmail.com/
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+
+## Send options.
+set smtp_url=smtps://doug@dougscarborough.com:**********@smtp.gmail.com
+set realname='Doug Scarborough'
+set from=doug@dougscarborough.com
+set hostname="gmail.com"
+set signature="Doug Scarborough"
+# Connection options
+set ssl_force_tls = yes
+unset ssl_starttls
+
+## Hook -- IMPORTANT!
+account-hook $folder "set imap_user=doug@dougscarborough.com imap_pass=*********"
